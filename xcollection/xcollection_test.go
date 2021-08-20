@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestStringExtractions(t *testing.T) {
+func TestStringBoolMapKeys(t *testing.T) {
 
 	keys := StringBoolMapKeys(map[string]bool{
 		"qwe": true,
