@@ -12,7 +12,7 @@ func StringBoolMapKeys(m map[string]bool) []string {
 }
 
 // StringRandomElement - fetch random element from string slice
-func StringRandomElement(slice []string ) string {
+func StringRandomElement(slice []string) string {
 	randomIndex := rand.Intn(len(slice))
 	return slice[randomIndex]
 }

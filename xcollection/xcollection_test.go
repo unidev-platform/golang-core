@@ -1,11 +1,12 @@
 package xcollection
 
 import (
-	"github.com/stretchr/testify/assert"
 	"log"
 	"math/rand"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestStringBoolMapKeys(t *testing.T) {
