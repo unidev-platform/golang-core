@@ -1,8 +1,9 @@
 package xenv
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestFetchingCurrentUser(t *testing.T) {
