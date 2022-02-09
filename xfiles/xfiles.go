@@ -8,8 +8,8 @@ import (
 	"github.com/unidev-platform/golang-core/xcollection"
 )
 
-// ReadDistinctFileLines - Read text file lines as slice without empty and duplicates
-func ReadDistinctFileLines(path string) ([]string, error) {
+// Distinct - Read text file lines as slice without empty and duplicates
+func Distinct(path string) ([]string, error) {
 	var linesMap = make(map[string]bool)
 
 	file, err := os.Open(path)
@@ -26,6 +26,6 @@ func ReadDistinctFileLines(path string) ([]string, error) {
 		}
 	}
 
-	return xcollection.StringBoolMapKeys(linesMap), scanner.Err()
+	return xcollection.MapKeys(linesMap), scanner.Err()
 
 }
