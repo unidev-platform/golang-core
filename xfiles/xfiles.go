@@ -2,7 +2,9 @@ package xfiles
 
 import (
 	"bufio"
+	"io/fs"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/unidev-platform/golang-core/xcollection"
@@ -28,4 +30,22 @@ func Distinct(path string) ([]string, error) {
 
 	return xcollection.MapKeys(linesMap), scanner.Err()
 
+}
+
+// Find - extract files matching extension
+func Find(dir string, extension string) ([]string, error) {
+	var files []string
+	err := filepath.WalkDir(dir, func(s string, d fs.DirEntry, e error) error {
+		if e != nil {
+			return e
+		}
+		if filepath.Ext(d.Name()) == extension {
+			files = append(files, s)
+		}
+		return nil
+	})
+	if err != nil {
+		return nil, err
+	}
+	return files, nil
 }

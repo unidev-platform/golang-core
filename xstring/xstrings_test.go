@@ -7,6 +7,7 @@ import (
 )
 
 func TestStringExtractions(t *testing.T) {
+	t.Parallel()
 	items := Between(" 1qwe2 666 1xxx2 000", "1", "2")
 
 	assert.Equal(t, 2, len(items))
