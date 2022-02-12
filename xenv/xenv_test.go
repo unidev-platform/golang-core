@@ -7,7 +7,7 @@ import (
 )
 
 func TestFetchingCurrentUser(t *testing.T) {
-
+	t.Parallel()
 	user := Env("USER", "")
 
 	assert.NotEmpty(t, user)
