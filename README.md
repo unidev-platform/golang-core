@@ -2,6 +2,11 @@
 
 Common code used in Go projects
 
+Usage:
+```
+go get github.com/unidev-platform/golang-core
+```
+
 Important directories:
   * `xfiles` - file related utilities
   * `xcollection` - collections related functions
